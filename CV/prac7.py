@@ -7,7 +7,7 @@ import numpy as np
  
  
 # Read the image
-img = cv2.imread('top3.tif', 0)
+img = cv2.imread('Images/top3.tif', 0)
  
 # Obtain number of rows and columns 
 # of the image
@@ -26,8 +26,8 @@ for i in range(1, m-1):
   img_new[i, j]= temp
  
 img_new = img_new.astype(np.uint8)
-cv2.imwrite('blurred.tif', img_new)
-cv2.imshow('blurred.tif', img_new)
+cv2.imwrite('Images/blurred.tif', img_new)
+cv2.imshow('Images/blurred.tif', img_new)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

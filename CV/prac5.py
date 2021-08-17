@@ -4,7 +4,7 @@
 rotation and scaling (image resizing).'''
 import cv2
 import numpy as np
-original = cv2.imread('a2.jpg')
+original = cv2.imread('Images/a2.jpg')
 cv2.imshow('Original image', original)
 #translation
 M = np.float32([[1, 0, 100], [0, 1, 50]])

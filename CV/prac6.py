@@ -4,7 +4,7 @@
 display its equalizedhistogram.'''
 import cv2
 import matplotlib.pyplot as plt
-img = cv2.imread('top4.tif', 0)
+img = cv2.imread('Images/top4.tif', 0)
 cv2.imshow('image', img)
 histr = cv2.calcHist([img], [0], None, [256], [0, 256])
 plt.plot(histr)
