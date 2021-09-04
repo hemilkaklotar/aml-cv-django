@@ -1,0 +1,8 @@
+django
+matplotlib
+numpy
+opencv-python
+opencv-contrib-python
+scipy
+pandas
+scikit-learn
