@@ -4,6 +4,6 @@ from hospital.views import *
 
 urlpatterns = [
     path('', home, name='home'),
-    path('', about, name='about'),
+    path('about/', about, name='about'),
 
 ]
