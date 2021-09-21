@@ -1,13 +1,13 @@
 {% include 'base.htm' %}
 {% include 'navigation.htm' %}
 {% block content %}
-{% ifequal error "No" %}
+{% ifequal error "no" %}
 <script>
     alert(' Logged in Successfully');
-    window.location = {% url 'home' %};
+    window.location = "{% url 'home' %}";
 </script>
 {% endifequal %}
-{% ifequal error "Yes" %}
+{% ifequal error "yes" %}
 <script>
     alert(' Invalid Login Please Try Again!');
 

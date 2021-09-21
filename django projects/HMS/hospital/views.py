@@ -17,7 +17,7 @@ def Index(request):
         return redirect('login')
     return render(request, 'index.htm')
 
-def login(request):
+def Login(request):
     error = ""
     if request.method == "POST":
         username_a = request.POST['uname']
@@ -26,15 +26,15 @@ def login(request):
         try :
             if user.is_staff:
                 login(request,user)
-                error = 'No'
+                error = "no"
             else:
-                error = "Yes"
+                error = "yes"
         except:
-            error = "Yes"
+            error = "yes"
     d = {'error':error}
     return render(request,'login.htm', d )
 
-def logout_admin(request):
+def Logout_admin(request):
     if not request.user.is_staff:
         return redirect('login')
     logout(request)
