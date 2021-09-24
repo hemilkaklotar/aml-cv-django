@@ -1,9 +1,9 @@
-#180450116009 – Hemil Kaklotar
 #Program 5
-'''Implement a Python program for 2D geometric operations like translation,
-rotation and scaling (image resizing).'''
+#Implement a Python program for 2D geometric operations like translation, rotation and scaling (image resizing).
+
 import cv2
 import numpy as np
+
 original = cv2.imread('Images/a2.jpg')
 cv2.imshow('Original image', original)
 #translation

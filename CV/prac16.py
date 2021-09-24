@@ -1,4 +1,4 @@
-#practical 16
+#Program 16
 #erosion and dilation morphological operations
 import cv2
 import numpy as np

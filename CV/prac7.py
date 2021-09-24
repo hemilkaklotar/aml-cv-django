@@ -1,7 +1,6 @@
-#180450116009 – Hemil Kaklotar
 #Program 7
-'''Implement a Python program for linear filter 
-(smoothing or average or mean filter) in spatial domain.'''
+#Implement a Python program for linear filter (smoothing or average or mean filter) in spatial domain.
+
 import cv2
 import numpy as np
  

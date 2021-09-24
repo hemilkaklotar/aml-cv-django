@@ -1,9 +1,9 @@
-#180450116009 – Hemil Kaklotar
 #program 4
-'''Implement a Python program for contrast stretching.
-New = (255 )*((current – m1)/(m2 - m1))'''
+#Implement a Python program for contrast stretching. New = (255 )*((current – m1)/(m2 - m1))
+
 import cv2
 import numpy as np
+
 image1=cv2.imread('Images/top2.tif', 0)
 cv2.imshow('before contrast stretching', image1)
 width = image1.shape[1]

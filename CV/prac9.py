@@ -1,8 +1,9 @@
-#180450116009 – Hemil Kaklotar
 #Program9
-'''Implement a Python program for Max filter in spatial domain.'''
+#Implement a Python program for Max filter in spatial domain.
+
 import cv2
 import numpy as np
+
 #Read the image
 img_noisy1 = cv2.imread('Images/home1.tif',0)
 cv2.imshow('original',img_noisy1)

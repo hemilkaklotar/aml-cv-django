@@ -1,4 +1,4 @@
-#practical 18
+#Program 18
 #find contours
 import cv2
 

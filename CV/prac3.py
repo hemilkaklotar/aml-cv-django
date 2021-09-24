@@ -1,7 +1,8 @@
-#180450116009 - Hemil Kaklotar
 #Program 3
-'''Implement a Python program for Canny edge detection.'''
+#Implement a Python program for Canny edge detection.
+
 import cv2 # import open cv library
+
 image1 = cv2.imread('Images/a2.jpg',1) #read image
 cv2.imshow('color image',image1) #show color image
 image2 = cv2.imread('Images/a2.jpg',0) #read gray scale image

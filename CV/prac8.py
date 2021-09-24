@@ -1,8 +1,9 @@
-#180450116009 – Hemil Kaklotar
-#Progarm 8
-'''Implement a Python program for Median filter in spatial domain.'''
+#Program 8
+#Implement a Python program for Median filter in spatial domain.
+
 import cv2
 import numpy as np
+
 #read the image
 img_noisy1 = cv2.imread('Images/pollen.tif', 0)
 cv2.imshow('original', img_noisy1)

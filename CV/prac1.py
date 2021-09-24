@@ -1,7 +1,8 @@
-#180450116009 – Hemil Kaklotar
 #program1
-'''Read color image and converted into gray and binary code.'''
-import cv2 #import open cv library
+#Read color image and converted into gray and binary code.
+
+import cv2 
+
 image = cv2.imread('Images/a2.jpg',1)
 cv2.imshow('color image',image)
 images = cv2.imread('Images/a2.jpg',0)

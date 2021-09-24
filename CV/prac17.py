@@ -1,4 +1,4 @@
-#practical 16
+#Program 16
 #opening and closing morphological operations
 
 import cv2
