@@ -6,3 +6,7 @@ opencv-contrib-python
 scipy
 pandas
 scikit-learn
+
+
+#virtual env
+#'  & c:\Users\hemil\Envs\test\Scripts\Activate.ps1 '

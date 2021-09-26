@@ -16,8 +16,9 @@
             <a class="nav-link" href="{% url  'contact' %}">Contact Us</a>
           </li>
           {% if not request.user.is_staff %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url  'login' %}">Login</a>
+          <li >
+            <button type="button" class="btn btn-primary" style="height: 40px; padding:0%;">
+            <a class="nav-link" href="{% url  'login' %}">Login</a></button>
           </li>
           {% endif %}
           {% if request.user.is_staff %}
@@ -42,8 +43,10 @@
             </ul>
           </li>
           
-          <li class="nav-item">
+          <li>
+            <button type="button" class="btn btn-primary" style="height: 40px; padding:0%;">
             <a class="nav-link" href="{% url  'logout_admin' %}">Logout</a>
+            </button>
           </li>
           {% endif %}
         </ul>
