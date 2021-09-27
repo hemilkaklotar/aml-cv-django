@@ -10,3 +10,4 @@ scikit-learn
 
 #virtual env
 #'  & c:\Users\hemil\Envs\test\Scripts\Activate.ps1 '
+#  cd "django projects/HMS"

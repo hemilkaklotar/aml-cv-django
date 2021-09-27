@@ -4,7 +4,7 @@
 {% ifequal error "no" %}
 <script>
     alert(' Logged in Successfully');
-    window.location = "{% url 'home' %}";
+    window.location = "{% url 'dashboard' %}";
 </script>
 {% endifequal %}
 {% ifequal error "yes" %}
@@ -13,7 +13,7 @@
 
 </script>
 {% endifequal %}
-<div class="container" style="margin:auto; padding: 50%;margin-bottom: 22%; ">
+<div class="container" style="margin:auto; margin-bottom: 22%; ">
     <h2 class="text-center">Admin Login</h2>
     <form method="POST">
         {% csrf_token %}

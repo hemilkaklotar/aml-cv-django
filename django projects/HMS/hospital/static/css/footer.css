@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .wwrapper {
+    min-height: 100%;
+    margin-bottom: -55px;
+  }
+  .ffooter,
+  .ppush {
+    height: 55px;
+    text-align: center;
+  }

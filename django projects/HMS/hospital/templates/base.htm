@@ -13,6 +13,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footable.bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footable.bootstrap.min.css' %}">
+    <script src="{% static 'js/footable.js' %}"></script>
+    <script src="{% static 'js/footable.min.js' %}"></script>
+    
     <title>Hospital Management System</title>
 </head>
 <body>
@@ -21,4 +26,32 @@
     {% endblock content %}
 
 </body>
+<!--<script type ="text/javascript" >
+    $(document).ready(function(){
+        $('.footable').footable({
+            "sorting": {
+                "enabled": true
+        	},
+            "filtering": {
+                "enabled": true
+            }
+        );
+    });
+</script>-->
+<script>
+    jQuery(function($){
+        $('.table').footable({
+            "sorting": {
+                "enabled": true
+            },
+            "filtering": {
+                "enabled": true
+            },
+            "editing": {
+                "enabled": true,
+                "editText": '<span class="fooicon fooicon-pencil" aria-hidden="true"></span>'
+            }
+        });
+    });
+</script>
 </html>
