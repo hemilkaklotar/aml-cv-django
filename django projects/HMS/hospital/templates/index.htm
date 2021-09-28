@@ -1,5 +1,51 @@
 {% include 'base.htm' %}
+{% load static %}
 {% include 'navigation.htm' %}
 {% block content %}
-    
-{% endblock content %}
+<h1 class="text-center">Admin Dashboard</h1>
+<div class="container">
+
+    <div class="card ">
+        <div class="card-deck" >
+        <div class="card-body text-center">
+            <div class="card-body profile-card">
+                <img class="img-thumbnail rounded-circle border-0" src="{% static 'images/person.png' %} " style="height: 50px;">
+                <div class="card-title">
+                    <h2 style="color:red;">{{d}}</h2>
+                    <a href="{% url 'view_doctor' %}"><h4 style="color:blue">View All Doctor</h4></a>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-deck" >
+        <div class="card-body text-center">
+            <div class="card-body profile-card">
+                <img class="img-thumbnail rounded-circle border-0" src="{% static 'images/person.png' %} " style="height: 50px;">
+                <div class="card-title">
+                    <h2 style="color:red;">{{p}}</h2>
+                    <a href="{% url 'view_patient' %}"><h4 style="color:blue">View All Patient</h4></a>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-deck" >
+        <div class="card-body text-center">
+            <div class="card-body profile-card">
+                <img class="img-thumbnail rounded-circle border-0" src="{% static 'images/person.png' %} " style="height: 50px;">
+                <div class="card-title">
+                    <h2 style="color:red;">{{a}}</h2>
+                    <a href="{% url 'view_appointment' %}"><h4 style="color:blue"> View all Appointment</h4></a>
+            </div>
+            </div>
+        </div>
+      </div>
+       
+    </div>
+    </div>  
+</div>
+</div>
+
+{% endblock %}
+{% include 'footer.htm'%}

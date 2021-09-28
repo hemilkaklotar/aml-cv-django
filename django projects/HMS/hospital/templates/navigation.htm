@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Hospital Management System</a>
+      <a class="navbar-brand" href="">Hospital Management System</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          {% if not request.user.is_staff %}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url  'home' %}">Home</a>
           </li>
@@ -14,14 +15,16 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url  'contact' %}">Contact Us</a>
-          </li>
-          {% if not request.user.is_staff %}
+          </li>         
           <li >
             <button type="button" class="btn btn-primary" style="height: 40px; padding:0%;">
             <a class="nav-link" href="{% url  'login' %}">Login</a></button>
           </li>
           {% endif %}
           {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url  'dashboard' %}">Dashboard</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Doctor
@@ -42,7 +45,16 @@
               
             </ul>
           </li>
-          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Appointment
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url  'view_appointment' %}">View Appointments</a></li>
+              <li><a class="dropdown-item" href="{% url  'add_appointment' %}">Add Appointment</a></li>
+              
+            </ul>
+          </li>
           <li>
             <button type="button" class="btn btn-primary" style="height: 40px; padding:0%;">
             <a class="nav-link" href="{% url  'logout_admin' %}">Logout</a>

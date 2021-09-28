@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
-from .models import Doctor, Patient
+from .models import Doctor, Patient, Appointment
 # Create your views here.
 def home(request):
     return render(request, 'home.htm')
@@ -19,7 +19,20 @@ def contact(request):
 def Index(request):
     if not request.user.is_staff:
         return redirect('login')
-    return render(request, 'index.htm')
+    doctors = Doctor.objects.all()
+    patients = Patient.objects.all()
+    appointments = Appointment.objects.all()
+    d = 0
+    p = 0
+    a = 0
+    for i in doctors:
+        d += 1
+    for i in patients:
+        p += 1
+    for i in appointments:
+        a += 1
+    d1={'d':d, 'p':p, 'a':a}
+    return render(request, 'index.htm', d1)
 
 def Login(request):
     error = ""
@@ -44,6 +57,7 @@ def Logout_admin(request):
     logout(request)
     return redirect('login')
 
+#doctor section
 def View_doctor(request):
     if not request.user.is_staff:
         return redirect('login')
@@ -74,7 +88,7 @@ def Add_doctor(request):
     d = {'error' : error}
     return render(request,'add_doctor.htm', d )
 
-    #patient---------
+#patient---------
 def View_patient(request):
     if not request.user.is_staff:
         return redirect('login')
@@ -105,3 +119,40 @@ def Add_patient(request):
             error = 'yes'
     d = {'error' : error}
     return render(request,'add_patient.htm', d )
+
+#appointment
+def View_appointment(request):
+    if not request.user.is_staff:
+        return redirect('login')
+    apt = Appointment.objects.all()
+    p = {'apt' : apt}
+    return render(request,'view_appointment.htm', p)
+
+def Delete_appointment(request,pid):
+    if not request.user.is_staff:
+        return redirect('login')
+    appointment = Appointment.objects.get(id = pid)
+    appointment.delete()
+    return redirect('view_appointment')
+
+def Add_appointment(request):
+    error = ""
+    if not request.user.is_staff:
+        return redirect('login')
+    doc = Doctor.objects.all()
+    pat = Patient.objects.all()
+    if request.method == "POST":
+        
+        d_name = request.POST['doctor']
+        p_name = request.POST['patient']
+        date_a = request.POST['date']
+        time_a = request.POST['time']
+        doctor = Doctor.objects.filter(name=d_name).first()
+        patient = Patient.objects.filter(name=p_name).first()
+        try :
+            Appointment.objects.create(doctor=doctor,patient=patient,date=date_a,time=time_a)
+            error = 'no'
+        except:
+            error = 'yes'
+    d = {'doctor' : doc,'patient' : pat,'error' : error}
+    return render(request,'add_appointment.htm', d )

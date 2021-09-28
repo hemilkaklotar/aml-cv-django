@@ -77,12 +77,13 @@
 
 <!----------------------Introduction Section------------->
 
-<div class="container-fluid">
+<div class="container-fluid" id="about" >
     <div class="row">
         <div class="col-md-4">
             <img src="">
         </div>
-        <div class="col-md-4" id="intro-text">
+        <div id="intro-text">
+            <div>
             <h1 class="text-center">
                 <h1 class="text-center">Welcome to hospital management system </h1>
             </h1>
@@ -90,29 +91,31 @@
             <h5>Hospital Management system is a system where you can take any type of services. It is located in
                 Tulsipur Dang. It provides different types of services like radiography, different types sergons with
                 highly reputed doctors.</h5>
-            </p>
+            </p></div>
+            <div>
             <img src="{% static 'images/4.webp' %}" style=" display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;">
+            width: 50%;"></div>
         </div>
-        <div class="col-md-4">
-            <div class="container-fluid">
-                <br>
-                <button class="btn btn-lg btn-block"><a href="#about" class="nav-link"><i
+        <div >
+            <div class="container-fluid ">
+                <table class="table">
+                <tr>
+                    <td>
+                        <td><button class="btn btn-lg btn-block "><a href="#about" class="nav-link"><i
                             class="fa fa-calendar-minus-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;Request
-                        Appointments</a></button>
-                <br>
-                <button class="btn btn-lg btn-block"><a href="#doctors" class="nav-link"><i
+                        Appointments</a></button></td>
+                        <td><button class="btn btn-lg btn-block "><a href="#doctors" class="nav-link"><i
                             class="fa fa-user-md"></i>&nbsp;&nbsp;&nbsp;&nbsp;Find
-                        Doctors</a></button>
-                <br>
-                <button class="btn btn-lg btn-block"><a href="#about" class="nav-link"><i
-                            class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;&nbsp;Location</a></button>
-                <br>
-                <button class="btn btn-lg btn-block"><a href="#about" class="nav-link"><i
+                        Doctors</a></button></td>
+                        <td><button class="btn btn-lg btn-block col-md-4"><a href="#about" class="nav-link"><i
+                            class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;&nbsp;Location</a></button></td>
+                            <td><button class="btn btn-lg btn-block col-md-4"><a href="#about" class="nav-link"><i
                             class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;Emergency
-                        Contact</a></button>
+                        Contact</a></button></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -123,7 +126,7 @@
 
 <hr>
 <!--------------Medical Services -------------------->
-<div class="container">
+<div class="container" id= "departments">
     <h2 class="text-center"> Medical Services</h2><hr>
     <div class="card-deck" >
       <div class="card ">
@@ -183,6 +186,7 @@
 <!-----------------------------Other Services Section Beginning-------------------->
 
 <div class="container-fluid" id="services">
+
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-center">Other Services</h1><hr>
@@ -190,92 +194,57 @@
     </div>
 
 
-    <div class="row owl-carousel owl-theme">
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src=" " alt=""
-                    style="margin-left: auto; margin-right: auto; width: 25%;">
+    <div class="card owl-carousel owl-theme">
+        <div class="card-deck" >
+            <div class="card ">
+              <div class="card-body text-center">
+                  <div class="card-img">
+                      <img src="{% static 'images/radiology.png' %}"
+                          style="margin-left: auto; margin-right: auto; height: 50px; padding-top: 5px;">
+                  </div>
+      
+                  <div class="card-body">
+                      <p class="card-text">Radiology</p>
+                  </div>
+              </div>
             </div>
-            <div class="card-body">
-                <p class="card-text">Emergency</p>
+            <div class="card ">
+              <div class="card-body text-center">
+                  <div class="card-img">
+                      <img src="{% static 'images/Orthopedic.png' %} "
+                          style="margin-left: auto; margin-right: auto; height: 50px; padding-top: 5px;">
+                  </div>
+      
+                  <div class="card-body">
+                      <p class="card-text">Orthopedic and Surgery</p>
+                  </div>
+              </div>
             </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src=" " alt="" style="margin-left: auto; margin-right: auto; width: 25%;">
+            <div class="card">
+              <div class="card-body text-center">
+                  <div class="card-img">
+                      <img src="{% static 'images/Laparoscopic.webp' %}"
+                          style="margin-left: auto; margin-right: auto; height: 50px; padding-top: 5px;">
+                  </div>
+      
+                  <div class="card-body">
+                      <p class="card-text">General and Laparoscopic Surgery</p>
+                  </div>
+              </div>
             </div>
-            <div class="card-body">
-                <p class="card-text">Pharmacy</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src="" alt=""
-                    style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">USG</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src="" alt=""
-                    style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">Endoscopy</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src="" alt=""
-                    style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">ECHO Services</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src="" alt="" style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">Colonoscopy</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src="#" alt="" style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">Digital X-Ray</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src=" " alt=""
-                    style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">Lab</p>
-            </div>
-        </div>
-
-        <div class="card shadow text-center items">
-            <div class="card-img">
-                <img src=" " alt="" style="margin-left: auto; margin-right: auto; width: 25%;">
-            </div>
-            <div class="card-body">
-                <p class="card-text">Colposcopy</p>
-            </div>
-        </div>
+            <div class="card ">
+              <div class="card-body text-center">
+                  <div class="card-img">
+                      <img src=" {% static 'images/Physician.png' %} "
+                          style="margin-left: auto; margin-right: auto; height: 50px; padding-top: 5px;">
+                  </div>
+      
+                  <div class="card-body">
+                      <p class="card-text">Physician</p>
+                  </div>
+              </div>
+            </div> 
+    </div>
     </div>
 </div>
 
