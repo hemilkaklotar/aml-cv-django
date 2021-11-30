@@ -9,5 +9,5 @@ scikit-learn
 
 
 #virtual env
-#'  & c:\Users\hemil\Envs\test\Scripts\Activate.ps1 '
+#'   & cmd /k workon.bat test '
 #  cd "django projects/HMS"
