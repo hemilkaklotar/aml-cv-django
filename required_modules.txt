@@ -6,8 +6,3 @@ opencv-contrib-python
 scipy
 pandas
 scikit-learn
-
-
-#virtual env
-#'   & cmd /k workon.bat test '
-#  cd "django projects/HMS"
